@@ -1,0 +1,78 @@
+.require{
+    height: 100vh;
+    background-image: url(/src/images/main/require-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &__subtitle{
+        font-family: $font-second;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+        text-align: center;
+        padding-top: 145px;
+    }
+    &__title{
+        font-size: 80px;
+        font-family: $font-second;
+        line-height: 80px;
+        letter-spacing: 3px;
+        margin-bottom: 133px;
+        text-align: center;
+
+
+    }
+    &__table{
+        max-width: 575px;
+        font-size: 18px;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        &-item{
+            grid-column: 3 span;
+            padding: .7rem .7rem 1.4rem;
+            border: 1px solid rgba(151, 151, 151, .5137254902);
+            &:last-child{
+                grid-column: 6 span;
+            }
+        }
+        &-title{
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            line-height: 24px;
+            font-size: 24px;
+            font-family: $font-second;
+            color:$orange;
+
+        }
+    }
+
+}
+@media (max-width:750px) {
+    .require{
+        background-position: center bottom;
+        background-size: contain;
+        background-color: #080A0B;
+        &__title{
+            font-size: 60px;
+        }
+    }
+    
+}
+@media (max-width:500px) {
+    .require{
+        background-position: center bottom;
+        background-size: contain;
+        background-color: #080A0B;
+        &__title{
+            font-size: 28px;
+            margin-bottom: 33px;
+            line-height: 22px;
+        }
+        &__subtitle{
+            font-size: 18px;
+            padding-top: 20px;
+        }
+    }
+    
+}

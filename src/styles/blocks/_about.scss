@@ -1,0 +1,210 @@
+.about {
+    // display: flex;
+
+    height: 100vh;
+    background-image: url('/src/images/main/abot-bg.jpg');
+    background-position-y: -2px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__inner {
+        position: relative;
+        height: 100vh;
+    }
+
+    &__content {
+        padding-top: 255px;
+
+        
+
+        &-title {
+            color: $white;
+            width: 410px;
+            font-size: 80px;
+            line-height: 80px;
+            text-transform: uppercase;
+            font-family: $font-second;
+            margin-bottom: 60px;
+        }
+
+        &-subtitle {
+            font-size: 24px;
+            line-height: 24px;
+            text-transform: uppercase;
+            font-family: $font-second;
+            margin-bottom: 10px;
+
+        }
+
+        &-desc {
+            font-size: 18px;
+            line-height: 22px;
+            width: 365px;
+            margin-left: 188px;
+            text-align: justify;
+            & span{
+                text-decoration: underline;
+                text-decoration-color: $orange;
+                text-underline-offset: 2px;
+                text-decoration-thickness: 3px;
+            }
+
+        }
+
+    }
+
+    &__swiper {
+        margin-top: 201px !important;
+        position: unset;
+        width: 550px;
+        height: 600px;
+        z-index: 1;
+        border-radius: 2%;
+        // position: relative;
+
+        &-next {
+            z-index: 5;
+            height: 38px;
+            width: 18px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            bottom: 50%;
+
+            &--color {
+
+                &:hover,
+                &:active {
+                    stroke: $orange;
+                }
+            }
+        }
+
+
+
+        &-slide {
+            height: 600px;
+            width: 510px;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            background-size: cover;
+
+
+        }
+    }
+
+    &__inner {
+        display: flex;
+    }
+    
+
+
+}
+
+
+// .swiper{
+//     width: 100%;
+//     &-slide{
+//         height: 100vh;
+//         background-size: cover;
+//         background-repeat: no-repeat;
+//         background-position: center center;
+//     }
+// }
+
+
+@media (min-width:1200px) and (max-width:1280px){
+    .about{
+        &__swiper{
+            margin-top: 180px !important;
+        }
+    }
+}
+@media (max-width:1200px){
+    .about{
+        &__content{
+            &-desc{
+                margin-left: 100px;
+            }
+        }
+        &__swiper{
+            position: relative;
+            fill: none;
+            &-next{
+                right: 5px;
+            }
+        }
+    }
+}
+@media (max-width:1060px){
+    .about{
+        &__content{
+            &-desc{
+                margin-left: 0;
+            }
+        }
+    }
+}
+@media (max-width:970px){
+    .about{
+        &__inner{
+            display: flex;
+            flex-direction: column;
+        }
+        &__content{
+            padding-top: 30px;
+            margin: 0 auto;
+            &-desc{
+                max-width: 500px;
+            }
+        }
+        &__swiper{
+            height: 479px;
+            width: 500px;
+            margin-top: 30px !important;
+        }
+    }
+}
+@media (max-width:530px){
+    .about{
+        &__content{
+            padding-top: 20px;
+            max-width: 530px;
+            width: auto;
+            &-title{
+                font-size: 33px;
+                line-height: 40px;
+                margin-bottom: 10px;
+                max-width: 500px;
+                width: auto;
+            }
+            &-desc{
+                font-size: 16px;
+                max-width: 500px;
+                width: auto;
+            }
+        }
+        &__swiper{
+            max-width: 310px;
+            width: auto;
+            height: 340px;
+            margin-top: 10px;
+            &-slide{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+}
+@media (max-width:330px){
+    .about{
+
+        &__swiper{
+            width: 285px;
+            height: 340px;
+            margin-top: 10px;
+        }
+    }
+
+}

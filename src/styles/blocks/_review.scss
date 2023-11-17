@@ -1,0 +1,249 @@
+.review {
+    height: 100vh;
+    background-image: url(/src/images/main/review-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -2px;
+
+    &__inner {
+        display: flex;
+        gap: 166px;
+
+    }
+
+    &__content {
+        margin-top: 300px;
+        width: 437px;
+
+        &-subtitle {
+            font-family: $font-second;
+            font-size: 24px;
+            line-height: 24px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        &-title {
+            font-size: 80px;
+            line-height: 80px;
+            letter-spacing: 3px;
+            margin-bottom: 40px;
+            font-family: $font-second;
+
+
+        }
+
+        &-desc {
+            width: 410px;
+            margin-bottom: 40px;
+        }
+
+        &-button {
+            padding: 18px 0;
+            width: 260px;
+            background-color: $orange;
+            color: #1A1917;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 16px;
+
+            &:hover,
+            &:active {
+                opacity: 0.8;
+            }
+
+        }
+    }
+
+    &__cards {
+        margin-top: 159px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__card {
+        position: relative;
+        max-width: 453px;
+        width: auto;
+        height: 205px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.08);
+        padding-top: 13px;
+        padding-bottom: 21px;
+        padding-left: 16px;
+        padding-right: 10px;
+        margin-bottom: 30px;
+
+        &:nth-child(1) {
+            grid-column: 2/5 span;
+            grid-row: 1;
+        }
+
+        &:nth-child(2) {
+            grid-column: 5 span;
+            grid-row: 2;
+        }
+
+        &:nth-child(3) {
+            grid-column: 2/5 span;
+            grid-row: 3;
+        }
+
+        &-box {
+            display: grid;
+            column-gap: 15px;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(2, 0.5fr);
+            margin-bottom: 22px;
+        }
+
+        &-name {
+            grid-column: 3 span;
+            line-height: 30px;
+            color: $orange;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 2px;
+            font-family: $font-second;
+
+            &::after {
+                content: '';
+                width: 18px;
+                height: 14px;
+                background-image: url(/src/images/main/twitter.png);
+                position: absolute;
+                right: 21px;
+                top: 23px;
+            }
+
+        }
+
+        &-photo {
+            width: 61px;
+            height: 61px;
+            grid-row: 2 span;
+            border-radius: 50%;
+            box-shadow: 7px 0 0 $orange;
+        }
+
+        &-about {
+            grid-column: 2 / 3 span;
+            grid-row: 2 / 1 span;
+            opacity: 0.6;
+        }
+
+        &-desc {
+            display: block;
+            line-height: 24.5px;
+            margin-bottom: 17px;
+
+        }
+
+        &-time {
+            opacity: 0.6;
+            font-size: 14px;
+            display: block;
+        }
+    }
+}
+
+@media (min-width:1200px) and (max-width:1280px){
+    .review{
+        &__cards{
+            margin-top: 100px;
+        }
+    }
+}
+@media (max-width:1175px){
+    .review{
+        &__inner{
+            gap:10px;
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .review {
+        &__inner {
+            flex-direction: column;
+            gap: 30px
+        }
+
+        &__content {
+            margin-top: 50px;
+            max-width: 750px;
+            width: auto;
+
+            &-title {
+                font-size: 60px;
+            }
+
+            &-desc {
+                font-size: 14px;
+                line-height: 16px;
+                max-width: 450px;
+                width: auto;
+            }
+        }
+
+        &__cards {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin: 0 auto;
+        }
+
+        &__card {
+            max-width: 350px;
+            width: auto;
+            height: 160px;
+            margin-bottom: 10px;
+
+            &-box {
+                margin-bottom: 13px;
+            }
+
+            &-photo {
+                width: 42px;
+                height: 42px;
+            }
+
+            &-name {
+                font-size: 21px;
+                line-height: 21px;
+            }
+
+            &-about {
+                font-size: 14px;
+            }
+
+            &-desc {
+                font-size: 14px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+
+}
+
+@media (max-width:800px) {
+    .review {
+        &__content {
+            margin-top: 15px;
+            &-title {
+                font-size: 28px;
+                line-height: 22px;
+                margin-bottom: 20px;
+
+            }
+
+            &-subtitle {
+                font-size: 18px;
+                line-height: 18px;
+            }
+        }
+    }
+
+}

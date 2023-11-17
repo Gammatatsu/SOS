@@ -1,0 +1,134 @@
+.footer {
+    height: 233px;
+    background-color: rgba(8, 10, 11, 1);
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 0.87px solid rgba(255, 255, 255, 0.5);
+    }
+
+    &__logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    &__navigation-list {
+        display: flex;
+        gap: 32px;
+        text-transform: uppercase;
+    }
+
+    &__navigation-item {
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 700;
+        letter-spacing: 10%;
+    }
+
+    &__social-list {
+        display: flex;
+        gap: 54px;
+    }
+
+    &__social-img {
+        transition: fill .3s;
+
+        &:hover,
+        &:active {
+            stroke: $orange;
+            fill: $orange;
+        }
+    }
+
+    &__license {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        padding-top: 22px;
+
+        &-desc {
+            font-size: 14px;
+            line-height: 19px;
+            opacity: 0.6;
+        }
+
+        &-list {
+            display: flex;
+            gap: 15px
+        }
+
+        &-link {
+            font-weight: 700;
+            letter-spacing: 10%;
+            line-height: 16px;
+            font-size: 12px;
+            text-transform: uppercase;
+
+        }
+    }
+}
+
+@media(max-width:950px) {
+    .footer {
+        z-index: 1;
+    }
+}
+
+@media(max-width:905px) {
+    .footer {
+        &__top{
+            position: relative;
+            flex-wrap: wrap;
+            margin-top: 60px;
+        }
+        &__logo{
+            // margin-right: 100vh;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top:-57px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        
+        }
+    }
+}
+@media(max-width:760px) {
+    .footer {
+        height: unset;
+        &__top{
+            position: relative;
+            flex-wrap: wrap;
+            margin-top: 60px;
+            justify-content: center;
+            // align-items: center;
+            row-gap: 40px;
+        }
+        &__license{
+            flex-direction: column;
+            align-items: center;
+
+        }
+        &__navigation-list{
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+        
+    }
+}
+@media(max-width:388px) {
+    .footer {
+        &__license{
+            margin-bottom: 15px;
+            &-list{
+                flex-direction: column;
+            }
+        }
+        
+    }
+}
