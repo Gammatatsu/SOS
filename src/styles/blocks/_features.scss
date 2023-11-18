@@ -32,11 +32,13 @@
         position: relative;
         width: 450px;
         margin-bottom: 36px;
+        list-style: none !important;
+
 
         // position: absolute;
         &-title {
             position: relative;
-            list-style: none;
+            list-style: none !important;
             font-family: $font-second;
             font-size: 36px;
             line-height: 36px;
@@ -142,6 +144,8 @@
             line-height: 21px;
             max-width: 450px;
             width: auto;
+            list-style: none !important;
+
         }
 
         &__info-desc {

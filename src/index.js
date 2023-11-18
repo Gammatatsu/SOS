@@ -102,6 +102,8 @@ const secondSwiper = new Swiper(".about__swiper", {
 menuButton.addEventListener('click',()=>{
    menuButton.classList.toggle('header__navigation-button--active')
    navigationList.classList.toggle('header__navigation-list--active')
+   document.querySelector('body').classList.toggle('menu-opened');
+
 
 })
 

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;700&display=swap');
-
+.menu-opened{
+    overflow-y: hidden;
+}
 .wrapper {
     min-height: 100%;
     display: flex;
